@@ -2,5 +2,24 @@
     position:absolute;
     width: 300px;
     left:10%;
+    top:42%;
+    animation: forwards 10s;
+}
+
+.coin{
+    position:absolute;
+    width: 400px;
+    left:20%;
+    top:40%;
+}
+
+
+.fungo{
+
+    position:absolute;
+    width: 10px;
+    left:40%;
     top:41%;
+
+
 }
