@@ -25,6 +25,39 @@
 <div class="fungo">
     <img src="fungo.PNG" alt="Trulli" width="260" height="320" position=30px;>        
 
+    <script>
+            
+        const charachter = document.querySelector('.charachter')
+        var topCh = 41;
+        var left = 15;
+
+        let speed = 1
+        window.onkeydown = (e) => {
+            if (e.code === "KeyW"){
+                topCh = topCh - speed;
+                charachter.style.top = topCh + "%"
+            }
+            if (e.code === "KeyS"){
+                top = top + speed;
+                charachter.style.top = top + "%"
+                console.log(top)
+            }
+            if (e.code === "KeyA"){
+                left = left - speed;
+                charachter.style.left = left + "%"
+            }
+            if (e.code === "KeyD"){
+                left = left + speed;
+                charachter.style.left = left + "%"
+            }
+
+
+        }
+    </script>
+
+
+
+
 
 </body>
 </html>

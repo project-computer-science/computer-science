@@ -11,5 +11,16 @@ body{
     transition: translate .3s;
 }
 
+.fungo{
+    position:absolute;
+    width: 0px;
+    left:10%;
+    top:41%;    
+    transition: translate .3s;
+
+
+
+    
+}
 
     
