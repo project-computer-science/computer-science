@@ -1,11 +1,15 @@
+body{
 
+ background-image: image();
+}
 
 .charachter{
     position:absolute;
     width: 300px;
     left:10%;
-    top:41%;
-    animation: forwards 10s;
+    top:41%;    
+    transition: translate .3s;
 }
+
 
     
