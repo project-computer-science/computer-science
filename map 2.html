@@ -24,7 +24,8 @@
 </div>
 
 <div class="fungo">
-    <img src="fungo.PNG" alt="Trulli" width="260" height="320" position=45px;>        
+    <img src="fungo.PNG" alt="Trulli" width="260" height="320" position=30px;> 
+           
 
 
 </div>
@@ -59,6 +60,38 @@
     }
 </script>
 
+<div>
+    <script>
+            
+    const fungo = document.querySelector('.fungo')
+    var topCh = 41;
+    var left = 15;
+
+    let speed = 1
+    window.onkeydown = (e) => {
+        if (e.code === "KeyP"){
+            topCh = topCh - speed;
+            fungo.style.top = topCh + "%"
+        }
+        if (e.code === "KeyI"){
+            top = top + speed;
+            fungo.style.top = top + "%"
+            console.log(top)
+        }
+        if (e.code === "KeyL"){
+            left = left - speed;
+           fungo.style.left = left + "%"
+        }
+        if (e.code === "KeyK"){
+            left = left + speed;
+            fungo.style.left = left + "%"
+        }
+
+
+    }
+</script>
+
+</div>
 
 
 </body>
