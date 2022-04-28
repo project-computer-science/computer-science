@@ -26,13 +26,14 @@
             
         </div>
         
-        <div class="coin">
+        <!-- <div class="coin">
             <img src="coin.PNG" alt="Trulli" width="260" height="320" position=30px;>   
             
-        </div>
+        </div> -->
         <div class="fungo">
             <img src="fungo.PNG" alt="Trulli" width="260" height="320" position=30px;> 
-            
+        </div>
+
     
        
             <script>
@@ -42,7 +43,36 @@
                 var left = 15;
 
                 let speed = 1
+                let jumping = false
+
+
+                const minHeight = 55
                 window.onkeydown = (e) => {
+                    // e.preventDefault()
+                    if (e.code === "Space"){
+                        let start = topCh
+                        let end = topCh - 20
+                        let direction = 3
+                        console.log('top')
+
+                        let interval = setInterval( () => {
+                            console.log('top')
+                            topCh = topCh - direction;
+                            charachter.style.top = topCh + "%"
+                            if (topCh < end){
+                                direction = direction * -1
+                            }
+                            if (topCh > start){
+                                if (topCh > minHeight){
+                                    topCh = minHeight;
+                                    console.log("topCh")
+                                    charachter.style.top = topCh + "%"
+                                }
+                                clearInterval(interval)
+                            }
+                        },1000/30)
+
+                    }
                     if (e.code === "KeyW"){
                         topCh = topCh - speed;
                         charachter.style.top = topCh + "%"
@@ -60,7 +90,12 @@
                         left = left + speed;
                         charachter.style.left = left + "%"
                     }
-
+                    console.log(topCh)
+                    if (topCh > minHeight){
+                        topCh = minHeight;
+                        console.log("topCh")
+                        charachter.style.top = topCh + "%"
+                    }
 
                 }
             </script>
